@@ -1,6 +1,6 @@
 // Módulos necesarios
-import * as THREE from "/lib/three.module.js"
-import { GLTFLoader } from "/lib/GLTFLoader.module.js"
+import * as THREE from "lib/three.module.js"
+import { GLTFLoader } from "lib/GLTFLoader.module.js"
 
 // Variables estándar
 let renderer, scene, camera
@@ -27,7 +27,7 @@ function init() {
 
     // Instanciar la cámara
     camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 0.1, 1500)
-    camera.position.set( 15, 12, 7 )
+    camera.position.set( 15, 12 , 7 )
     camera.lookAt( 0, 12, 0 ) 
 }
 
