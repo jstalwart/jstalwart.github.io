@@ -6,7 +6,7 @@ import { GLTFLoader } from "/lib/GLTFLoader.module.js"
 let renderer, scene, camera
 
 // Otras globales
-let base
+let robot
 let brazo
 let antebrazo
 let pinza
@@ -27,14 +27,14 @@ function init() {
 
     // Instanciar la cámara
     camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 0.1, 1500)
-    camera.position.set( 15, 10, 7 )
-    camera.lookAt( 0, 10, 0 ) 
+    camera.position.set( 15, 12, 7 )
+    camera.lookAt( 0, 12, 0 ) 
 }
 
 function loadScene() {
     // Material sencillo
     const material = new THREE.MeshBasicMaterial({ color : 0x220044})
-    const roboMaterial = new THREE.MeshBasicMaterial({ color: 'yellow', wireframe:true})
+    const roboMaterial = new THREE.MeshBasicMaterial({ color: 'yellow', wireframe: true})
 
     // Suelo
     const suelo = new THREE.Mesh( new THREE.PlaneGeometry(500, 500, 1000, 1000), material )
@@ -43,11 +43,12 @@ function loadScene() {
     scene.add( suelo )
 
     // Robot
+    robot = new THREE.Object3D()
     // Base
     const base = new THREE.Mesh( new THREE.CylinderGeometry(5, 5, 1.5, 36), roboMaterial)
     base.position.x = 0
     base.position.y = 0.75
-    scene.add(base)
+    robot.add(base)
 
     //Brazo
     const eje = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 1.8, 36), roboMaterial)
@@ -114,18 +115,19 @@ function loadScene() {
     ]);
 
     const indices = [
-        0, 1, 2,
+        0, 2, 1,
         1, 2, 3, 
-        4, 5, 6, 
-        5, 6, 7, 
+        5, 7, 6, 
+        5, 6, 4, 
         0, 4, 6,  
-        0, 2, 6, 
-        0, 4, 5, 
+        0, 6, 2, 
+        0, 5, 4, 
         0, 1, 5,
-        3, 5, 1, 
-        3, 7, 5, 
-        3, 7, 6, 
+        3, 1, 5, 
+        3, 1, 7, 
+        3, 6, 7, 
         3, 2, 6
+        
     ]
     falange2_structure.setIndex(indices)
     falange2_structure.setAttribute('position', new THREE.BufferAttribute( vertices, 3))
@@ -144,8 +146,9 @@ function loadScene() {
 
     pinza.position.y = 24
     brazo.add(pinza)
+    robot.add(brazo)
     
-    scene.add( brazo )
+    scene.add( robot )
     scene.add( new THREE.AxisHelper( 3 ) )
 }
 
