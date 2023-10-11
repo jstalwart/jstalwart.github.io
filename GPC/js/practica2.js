@@ -115,19 +115,18 @@ function loadScene() {
     ]);
 
     const indices = [
-        0, 2, 1,
-        1, 2, 3, 
-        5, 7, 6, 
-        5, 6, 4, 
-        0, 4, 6,  
-        0, 6, 2, 
-        0, 5, 4, 
-        0, 1, 5,
+        0, 1, 2,
+        1, 3, 2, 
+        5, 6, 7, 
+        5, 4, 6, 
+        0, 6, 4,  
+        0, 2, 6, 
+        0, 4, 5, 
+        0, 5, 1,
         3, 1, 5, 
-        3, 1, 7, 
-        3, 6, 7, 
-        3, 2, 6
-        
+        3, 5, 7, 
+        3, 7, 6, 
+        3, 6, 2 
     ]
     falange2_structure.setIndex(indices)
     falange2_structure.setAttribute('position', new THREE.BufferAttribute( vertices, 3))
