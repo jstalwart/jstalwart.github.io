@@ -9,7 +9,7 @@
 
 import * as THREE from "../lib/three.module.js"
 import { GLTFLoader } from "../lib/GLTFLoader.module.js"
-import { OrbitControls } from "../../lib/OrbitControls.module.js"
+import { OrbitControls } from "../lib/OrbitControls.module.js"
 
 // Variables estándar
 let renderer, scene, camera;
