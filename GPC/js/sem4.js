@@ -177,7 +177,7 @@ function animate(event){
 function setupGUI(){
     // Definicion de controles
     effectController = {
-        mensaje: 'Soldado & Robota',
+        z: 'Soldado & Robota',
         giroY: 0.0,
         separacion: 0,
         colorsuelo: 'rgb(255,255,0)',
