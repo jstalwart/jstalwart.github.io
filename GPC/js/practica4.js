@@ -19,21 +19,41 @@ let renderer, scene, camera;
 // Otras globales
 let robot, brazo, antebrazo, mano, dedoa, dedob;
 let roboMaterial = new THREE.MeshNormalMaterial({wireframe: true/false, flatShading: true/false});
-let angulo= 0;
+let speed= 0.1;
 
 // Variables de la cámara
 let controls;
 let planta;
 const L = 5; // lado menor de las vistas (la mitad)
+let h;
 
 //Variable controlador
 let effectController;
 
 // Acciones 
+function move(){
+    console.log("Tecla presionada:", event.keyCode);
+    var keyCode = event.which;
+    if (keyCode == 37) {
+        robot.position.z -= speed;
+    } else if (keyCode == 38) {
+        robot.position.x += speed;
+    } else if (keyCode == 39) {
+        robot.position.z += speed;
+    } else if (keyCode == 40) {
+        robot.position.x -= speed;
+    } else if (keyCode == 32) {
+        robot.position.set(0, 0, 0);
+    }
+}
+
 init();
 loadScene();
 setupGUI();
 render();
+
+
+
 
 // Funciones
 function init() {
@@ -60,6 +80,14 @@ function init() {
 
     // Aspect ratio 
     window.addEventListener('resize', updateAspectRatio);
+
+    //Movement
+    //renderer.domElement.addEventListener('keydown', move);
+    //document.addEventListener('keydown', move);
+    document.addEventListener("keydown", move, false);
+
+
+
 }
 
 function loadScene() {
@@ -74,12 +102,10 @@ function loadScene() {
     scene.add( suelo )
 
     // Robot
-    robot = new THREE.Object3D()
     // Base
-    const base = new THREE.Mesh( new THREE.CylinderGeometry(5, 5, 1.5, 36), roboMaterial)
-    base.position.x = 0
-    base.position.y = 0.75
-    robot.add(base)
+    robot = new THREE.Mesh( new THREE.CylinderGeometry(5, 5, 1.5, 36), roboMaterial)
+    robot.position.x = 0
+    robot.position.y = 0.75
 
     //Brazo
     const eje = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 1.8, 36), roboMaterial)
@@ -206,7 +232,6 @@ function setCameras(ar){
 
 function update()
     {
-        TWEEN.update();
 
         // Lectura de controles en GUI (mejor hacerlo con onChange)
         robot.rotation.y = effectController.giroBase * Math.PI / 180;
@@ -216,13 +241,10 @@ function update()
         mano.rotation.z = effectController.rotacionPinza * Math.PI / 180;
         dedoa.position.z = -0.2-effectController.aperturaPinza/20;
         dedob.position.z = 0.2+ effectController.aperturaPinza/20;
+        robot.material.wireframe = effectController.consistencia;
+        speed = effectController.speed;
 
-        if (effectController.consistencia){
-            roboMaterial = new THREE.MeshBasicMaterial({ color: 'yellow', wireframe: true})
-        }
-        else{
-            roboMaterial = new THREE.MeshNormalMaterial({wireframe: true/false, flatShading: true/false})
-        }
+        TWEEN.update();
         /*cubo.position.set(-1-effectController.separacion/2,0,0);
         esfera.position.set(1+effectController.separacion/2,0,0);
         cubo.material.setValues( {color: effectController.colorsuelo} );
@@ -279,26 +301,174 @@ function updateAspectRatio() {
 function setupGUI(){
     // Definicion de controles
     effectController = {
+        speed:1,
         giroBase: 0.0,
         giroBrazo: 0.0,
         giroAntebrazo_Y: 0.0,
         giroAntebrazo_Z: 0.0, 
         rotacionPinza: 0.0, 
         aperturaPinza: 15.0,
-        consistencia: true
+        consistencia: false, 
+        animacion: animar
     };
 
     // Creacion interfaz
     const gui = new GUI();
 
     // Construccion del menu
-    const h = gui.addFolder("Control robot");
+    h = gui.addFolder("Control robot");
+    h.add(effectController, "speed", 0, 3).name("Velocidad de movimiento");
     h.add(effectController, "giroBase", -180.0, 180.0).name("Giro de la base (Y)");
     h.add(effectController, "giroBrazo", -45.0, 45.0).name("Giro del brazo (Z)");
     h.add(effectController, "giroAntebrazo_Y", -180.0, 180.0).name("Giro del antebrazo (Y)");
     h.add(effectController, "giroAntebrazo_Z", -90.0, 90.0).name("Giro del antebrazo (Z)");
     h.add(effectController, "rotacionPinza", -40.0, 220.0).name("Rotación de la pinza");
     h.add(effectController, "aperturaPinza", 0.0, 15.0).name("Apertura de la pinza");
-    h.add(effectController, "consistencia").name("Alambre")
+    h.add(effectController, "consistencia").name("Alambre");
+    h.add(effectController, "animacion").name("Animar");
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+function animar(){
+    new TWEEN.Tween(antebrazo.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    sleep(1500).then(() => {animation1()});
+}
+
+function animation1(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+
+    new TWEEN.Tween(antebrazo.rotation)
+        .to({x:[0], y:[0], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    sleep(1500).then(() => {animation2()});
+}
+
+function animation2(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/4]}, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/2]}, 1500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(mano.rotation).
+        to({x:[0], y:[0], z:[0] }, 500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    sleep(1500).then(() => {animation3()});
+}
+
+function animation3(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/4]}, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/2]}, 1500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(dedoa.position).
+        to({z:[-0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(dedob.position).
+        to({z:[0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    sleep(1500).then(() => {animation4()});
+}
+
+function animation4(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/4]}, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[-Math.PI/2]}, 1500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(dedoa.position).
+        to({z:[-0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(dedob.position).
+        to({z:[0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    new TWEEN.Tween(mano.rotation).
+        to({x:[0], y:[0], z:[Math.PI] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    sleep(1500).then(() => {animation5()});
+}
+
+function animation5(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[-Math.PI/2], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 1500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(dedoa.position).
+        to({z:[-0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(dedob.position).
+        to({z:[0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    new TWEEN.Tween(mano.rotation).
+        to({x:[0], y:[0], z:[0] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    sleep(1500).then(() => {animation6()});
+}
+
+function animation6(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[0], z:[0]}, 1500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 1500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(dedoa.position).
+        to({z:[-0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(dedob.position).
+        to({z:[0.2] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    new TWEEN.Tween(mano.rotation).
+        to({x:[0], y:[0], z:[0] }, 1500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    sleep(1500).then(() => {animation7()});
+}
+
+function animation7(){
+    new TWEEN.Tween(robot.rotation)
+        .to({x:[0], y:[0], z:[0]}, 500)  // Rotar hasta -π/2
+        .start()
+    new TWEEN.Tween(brazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(antebrazo.rotation).
+        to({x:[0], y:[0], z:[0]}, 500).
+        interpolation(TWEEN.Interpolation.Bezier).start();
+    new TWEEN.Tween(dedoa.position).
+        to({z:[-0.95] }, 500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+    new TWEEN.Tween(dedob.position).
+        to({z:[0.95] }, 500).
+        interpolation(TWEEN.Interpolation.Linear).start(); 
+    new TWEEN.Tween(mano.rotation).
+        to({x:[0], y:[0], z:[0] }, 500).
+        interpolation(TWEEN.Interpolation.Linear).start();
+
+    }
