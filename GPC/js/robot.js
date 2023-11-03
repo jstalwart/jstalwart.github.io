@@ -329,7 +329,7 @@ function create_cabina(){
     //Timón
     const rudder = new THREE.Mesh( new THREE.SphereGeometry( .1, 20, 20 ), matsuelo );
     const glloader = new GLTFLoader()
-    glloader.load( '../models/rudder/scene.gltf', function(objeto) {
+    glloader.load( './models/rudder/scene.gltf', function(objeto) {
         rudder.add( objeto.scene )
         objeto.scene.scale.set( 0.2, 0.2, 0.2 )
         objeto.scene.position.y = 1
@@ -420,7 +420,7 @@ function create_pasillo(){
     pared1.position.y = 25
 
     const loader_shields = new GLTFLoader()
-    loader_shields.load( '../models/sci_fi_antenna/scene.gltf', function(objeto) {
+    loader_shields.load( './models/sci_fi_antenna/scene.gltf', function(objeto) {
         pared1.add( objeto.scene )
         objeto.scene.scale.set( 25 , 25, 25 )
         objeto.scene.position.x = -2.5
@@ -439,7 +439,7 @@ function create_pasillo(){
     pared2.position.x = 50
 
     const loader_guns = new GLTFLoader()
-    loader_guns.load( '../models/scifi_spaceship_star_gun/scene.gltf', function(objeto) {
+    loader_guns.load( './models/scifi_spaceship_star_gun/scene.gltf', function(objeto) {
         pared2.add( objeto.scene )
         objeto.scene.scale.set( 4 , 4, 4 )
         objeto.scene.position.x = 95
@@ -547,7 +547,7 @@ function create_reactor(){
     //Reactor
     const reactor = new THREE.Mesh( new THREE.SphereGeometry( .1, 20, 20 ), paredes );
     const glloader = new GLTFLoader()
-    glloader.load( '../models/scifi_reactor_core/scene.gltf', function(objeto) {
+    glloader.load( './models/scifi_reactor_core/scene.gltf', function(objeto) {
         reactor.add( objeto.scene )
         objeto.scene.scale.set( 20, 20, 20 )
         objeto.scene.position.y = 0
@@ -563,7 +563,7 @@ function create_reactor(){
     const metal = new THREE.MeshStandardMaterial({color:"grey", map: metal_tex})
     const control_reactor = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), metal)
     const contr_Reactor_loader = new GLTFLoader()
-    contr_Reactor_loader.load( '../models/sci_fi_panel_control/scene.gltf', function(objeto) {
+    contr_Reactor_loader.load( './models/sci_fi_panel_control/scene.gltf', function(objeto) {
         control_reactor.add( objeto.scene )
         objeto.scene.scale.set( 75, 75, 75 )
         objeto.scene.position.y = 3.5
@@ -584,7 +584,7 @@ function create_reactor(){
     //Derecho
     const r_engine = new THREE.Mesh( new THREE.SphereGeometry( .1, 20, 20 ), matsuelo );
     const glloader2 = new GLTFLoader()
-    glloader2.load( '../models/engine/scene.gltf', function(objeto) {
+    glloader2.load( './models/engine/scene.gltf', function(objeto) {
         r_engine.add( objeto.scene )
         objeto.scene.scale.set( 50, 50, 50 )
         objeto.scene.position.y = 25
@@ -602,7 +602,7 @@ function create_reactor(){
     //Izquierdo
     const l_engine = new THREE.Mesh( new THREE.SphereGeometry( .1, 20, 20 ), matsuelo );
     const glloader3 = new GLTFLoader()
-    glloader3.load( '../models/engine/scene.gltf', function(objeto) {
+    glloader3.load( './models/engine/scene.gltf', function(objeto) {
         l_engine.add( objeto.scene )
         objeto.scene.scale.set( 50, 50, 50 )
         objeto.scene.position.y = 25
@@ -620,7 +620,7 @@ function create_reactor(){
     //Izquierdo
     const engine = new THREE.Mesh( new THREE.SphereGeometry( .1, 20, 20 ), matsuelo );
     const glloader4 = new GLTFLoader()
-    glloader4.load( '../models/engine/scene.gltf', function(objeto) {
+    glloader4.load( './models/engine/scene.gltf', function(objeto) {
         engine.add( objeto.scene )
         objeto.scene.scale.set( 50, 50, 50 )
         objeto.scene.position.y = 25
