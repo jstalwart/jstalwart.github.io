@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rudder
+* source:	https://sketchfab.com/3d-models/rudder-22e372c57646498c8db1cde58d7dd8fa
+* author:	pawuwa (https://sketchfab.com/pawuwa)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rudder" (https://sketchfab.com/3d-models/rudder-22e372c57646498c8db1cde58d7dd8fa) by pawuwa (https://sketchfab.com/pawuwa) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

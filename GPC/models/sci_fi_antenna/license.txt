@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci_Fi Antenna
+* source:	https://sketchfab.com/3d-models/sci-fi-antenna-dcfd54e46fcd4cf48ec331bb79b209de
+* author:	Zambur (https://sketchfab.com/Zambur)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci_Fi Antenna" (https://sketchfab.com/3d-models/sci-fi-antenna-dcfd54e46fcd4cf48ec331bb79b209de) by Zambur (https://sketchfab.com/Zambur) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

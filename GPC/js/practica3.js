@@ -61,7 +61,7 @@ function loadScene() {
     const roboMaterial = new THREE.MeshNormalMaterial({wireframe: true/false, flatShading: true/false})
 
     // Suelo
-    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(500, 500, 1000, 1000), material )
+    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(100, 100, 100, 100), material )
     suelo.rotation.x = -Math.PI/2
     suelo.position.y = -0.2
     scene.add( suelo )

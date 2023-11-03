@@ -1,0 +1,11 @@
+Model Information:
+* title:	Control Panel
+* source:	https://sketchfab.com/3d-models/control-panel-b9e315202e8142f9ae4bfaf18665f588
+* author:	Alexander_Borisevich (https://sketchfab.com/boriseviav)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Control Panel" (https://sketchfab.com/3d-models/control-panel-b9e315202e8142f9ae4bfaf18665f588) by Alexander_Borisevich (https://sketchfab.com/boriseviav) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

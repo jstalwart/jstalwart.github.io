@@ -1,0 +1,815 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1901,
+      "max": [
+        13.418563842773438,
+        21.850173950195313,
+        0.0
+      ],
+      "min": [
+        -7.594546794891357,
+        -21.850173950195313,
+        -81.89273834228516
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 22812,
+      "componentType": 5126,
+      "count": 1901,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1901,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1901,
+      "max": [
+        0.9996928572654724,
+        0.9265716671943665
+      ],
+      "min": [
+        0.0003071296087000519,
+        0.0003071296087000519
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7920,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 45624,
+      "componentType": 5126,
+      "count": 203,
+      "max": [
+        4.295087814331055,
+        4.29692268371582,
+        26.26849365234375
+      ],
+      "min": [
+        -4.295087814331055,
+        -14.30215835571289,
+        -3.725290298461914e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 48060,
+      "componentType": 5126,
+      "count": 203,
+      "max": [
+        1.0,
+        1.0,
+        0.9999306797981262
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9997444152832031
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 30416,
+      "componentType": 5126,
+      "count": 203,
+      "max": [
+        0.999971866607666,
+        0.9866335391998291,
+        0.9578824043273926,
+        -1.0
+      ],
+      "min": [
+        -0.9983460307121277,
+        -0.9730077385902405,
+        -0.984999418258667,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 15208,
+      "componentType": 5126,
+      "count": 203,
+      "max": [
+        0.32772374153137207,
+        0.35641688108444214
+      ],
+      "min": [
+        0.0004920843639411032,
+        0.0004920843639411032
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 31680,
+      "componentType": 5125,
+      "count": 1008,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 50496,
+      "componentType": 5126,
+      "count": 58,
+      "max": [
+        4.295087814331055,
+        4.296923637390137,
+        23.056211471557617
+      ],
+      "min": [
+        -4.295087814331055,
+        -4.296923637390137,
+        5.9604644775390625e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 51192,
+      "componentType": 5126,
+      "count": 58,
+      "max": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 33664,
+      "componentType": 5126,
+      "count": 58,
+      "max": [
+        1.7675702110864222e-05,
+        1.1226115930185188e-05,
+        -1.0,
+        1.0
+      ],
+      "min": [
+        -2.3634765966562554e-05,
+        -1.5976551367202774e-05,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 16832,
+      "componentType": 5126,
+      "count": 58,
+      "max": [
+        0.2570415139198303,
+        0.6571382880210876
+      ],
+      "min": [
+        0.0004920661449432373,
+        0.3574010133743286
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 35712,
+      "componentType": 5125,
+      "count": 168,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 51888,
+      "componentType": 5126,
+      "count": 300,
+      "max": [
+        7.822403430938721,
+        7.830223560333252,
+        26.510883331298828
+      ],
+      "min": [
+        -7.822444915771484,
+        -7.830226421356201,
+        -2.9802322387695313e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 55488,
+      "componentType": 5126,
+      "count": 300,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 34592,
+      "componentType": 5126,
+      "count": 300,
+      "max": [
+        1.0,
+        0.006898888386785984,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.0074949078261852264,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 17296,
+      "componentType": 5126,
+      "count": 300,
+      "max": [
+        0.9489573240280151,
+        0.9748522639274597
+      ],
+      "min": [
+        0.000492095947265625,
+        0.0004920661449432373
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 36384,
+      "componentType": 5125,
+      "count": 840,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 59088,
+      "componentType": 5126,
+      "count": 438,
+      "max": [
+        9.9556245803833,
+        9.9556245803833,
+        45.63442611694336
+      ],
+      "min": [
+        -9.9556245803833,
+        -9.9556245803833,
+        -4.470348358154297e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 64344,
+      "componentType": 5126,
+      "count": 438,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 39392,
+      "componentType": 5126,
+      "count": 438,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 19696,
+      "componentType": 5126,
+      "count": 438,
+      "max": [
+        0.9995079040527344,
+        0.9770816564559937
+      ],
+      "min": [
+        0.000492095947265625,
+        0.0004920661449432373
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 39744,
+      "componentType": 5125,
+      "count": 1176,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Sousinho (https://sketchfab.com/sousinho)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/electric-meter-ee5316d1e26640dcacdb0c9813eadc3f",
+      "title": "Electric meter"
+    },
+    "generator": "Sketchfab-13.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 44448,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23200,
+      "byteOffset": 44448,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 69600,
+      "byteOffset": 67648,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 46400,
+      "byteOffset": 137248,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 183648,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/fusebox_baseColor.png"
+    },
+    {
+      "uri": "textures/fusebox_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/fusebox_emissive.png"
+    },
+    {
+      "uri": "textures/fusebox_normal.png"
+    },
+    {
+      "uri": "textures/fusebox_pipes_baseColor.png"
+    },
+    {
+      "uri": "textures/fusebox_pipes_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/fusebox_pipes_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 2
+      },
+      "name": "fusebox",
+      "normalTexture": {
+        "index": 3
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "fusebox_pipes",
+      "normalTexture": {
+        "index": 6
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 4
+        },
+        "metallicRoughnessTexture": {
+          "index": 5
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "fusebox_fusebox_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "fusebox pipe.002_fusebox pipes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "fusebox pipe_fusebox pipes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "fusebox pipe.003_fusebox pipes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "fusebox pipe.004_fusebox pipes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TANGENT": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 24,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        -2.8327693431939995e-16,
+        2.8327693431939985e-16,
+        0.0,
+        -2.832769343193999e-16,
+        -6.123234262925839e-17,
+        1.0,
+        0.0,
+        -2.832769343193999e-16,
+        -1.0,
+        -6.123234262925839e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Fusebox.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.616121292114258,
+        -3.219825029373169,
+        81.04402160644531,
+        1.0
+      ],
+      "name": "fusebox"
+    },
+    {
+      "mesh": 0,
+      "name": "fusebox_fusebox_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.616121292114258,
+        -3.219825029373169,
+        176.24554443359375,
+        1.0
+      ],
+      "name": "fusebox pipe.002"
+    },
+    {
+      "mesh": 1,
+      "name": "fusebox pipe.002_fusebox pipes_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.616121292114258,
+        -3.219825029373169,
+        81.04402160644531,
+        1.0
+      ],
+      "name": "fusebox pipe"
+    },
+    {
+      "mesh": 2,
+      "name": "fusebox pipe_fusebox pipes_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.616094589233398,
+        -3.219836950302124,
+        104.1002426147461,
+        1.0
+      ],
+      "name": "fusebox pipe.003"
+    },
+    {
+      "mesh": 3,
+      "name": "fusebox pipe.003_fusebox pipes_0"
+    },
+    {
+      "children": [
+        12
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.616079807281494,
+        -3.162598133087158,
+        130.61111450195313,
+        1.0
+      ],
+      "name": "fusebox pipe.004"
+    },
+    {
+      "mesh": 4,
+      "name": "fusebox pipe.004_fusebox pipes_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    }
+  ]
+}

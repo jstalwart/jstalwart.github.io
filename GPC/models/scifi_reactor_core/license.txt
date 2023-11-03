@@ -1,0 +1,11 @@
+Model Information:
+* title:	GD55_MOD1_A2_AldoVazquez
+* source:	https://sketchfab.com/3d-models/gd55-mod1-a2-aldovazquez-d2189823a9de4e1f856988faa37f5723
+* author:	Aurantiko (https://sketchfab.com/Aurantico)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "GD55_MOD1_A2_AldoVazquez" (https://sketchfab.com/3d-models/gd55-mod1-a2-aldovazquez-d2189823a9de4e1f856988faa37f5723) by Aurantiko (https://sketchfab.com/Aurantico) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
